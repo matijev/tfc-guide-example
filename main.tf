@@ -19,13 +19,11 @@ resource "aws_dynamodb_table" "tfc_example_table" {
     type = "S"
   }
 
-  attribute {
+  attribute [{
     name = "UserName"
     type = "S"
-  }
-  
-   attribute {
+  }, {
     name = "ForeName"
     type = "S"
-  }
+  }]
 }
