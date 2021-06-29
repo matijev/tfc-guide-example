@@ -14,14 +14,12 @@ resource "aws_dynamodb_table" "tfc_example_table" {
   hash_key       = "UUID"
   range_key      = "UserName"
 
-  attribute = [{
+  attribute = {
     name = "UUID"
     type = "S"
-  }, {
+  }
+  attribute = {
     name = "UserName"
     type = "S"
-  }, {
-    name = "ForeName"
-    type = "S"
-  }]
+  }
 }
